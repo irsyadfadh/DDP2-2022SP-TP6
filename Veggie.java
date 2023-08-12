@@ -6,7 +6,7 @@ public class Veggie extends Product{
         super(name, price, stok);
         this.isOrganic = isOrganic;
     }
-
+    /*menghitung diskon berdasarkan jenis dan jumlah sayuran yang dibeli. */
     public int checkDiscount(int quantity){
         if(this.isOrganic){
             if(quantity >= 5)

@@ -44,7 +44,7 @@ public class ShyourBox {
         } while (choice != 0);
         scanner.close();
     }
-
+    /*menampilkan menu yang dapat dilakukan oleh pelanggan. */
     public void customerMenu() {
         Scanner scanner = new Scanner(System.in);
         int choice;
@@ -105,7 +105,7 @@ public class ShyourBox {
             }
         } while (choice != 0);
     }
-
+    /*melakukan inisialisasi produk pada ShyourBox. */
     public void initProducts(){
         this.products.add(new Veggie("Bayam",1000, 20, false));
         this.products.add(new Veggie("Jamur",1000, 15, true));
@@ -118,7 +118,7 @@ public class ShyourBox {
         this.products.add(new Diary("Keju", 30000, 20, "06 08 2023"));
         this.products.add(new Diary("Yogurt", 15000, 10, "06 08 2026"));
     }
-
+    /*melakukan inisialisasi pelanggan pada ShyourBox. */
     public void initCustomers(){
         this.customers.add(new Customer("Hana"));
         this.customers.add(new Customer("Sakura"));
@@ -134,6 +134,7 @@ public class ShyourBox {
      * @param name
      * @return
      */
+    /*Mencari Produk berdasarkan nama */
     public Product searchProduct(String name) {
         // TODO: Implement this method.
         for (Product product : products) {
@@ -143,7 +144,7 @@ public class ShyourBox {
         }
         return null;
     }
-
+    /*Mencari Customer berdasarkan nama */
     public Customer searchCustomer(String name) {
         // TODO: Implement this method.
         for (Customer customer : customers) {

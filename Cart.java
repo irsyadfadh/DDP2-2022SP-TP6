@@ -7,11 +7,11 @@ public class Cart {
     public Cart() {
         orderList = new ArrayList<>();
     }
-
+    /*Method untuk menambahkan OrderItem ke dalam keranjang. */
     public void addOrderItem(OrderItem orderItem) {
         orderList.add(orderItem);
     }
-
+    /*Method untuk menghitung total harga dari seluruh item dalam keranjang. */
     public int getTotalPrice() {
         int totalPrice = 0;
         for (OrderItem orderItem : orderList) {
@@ -20,7 +20,7 @@ public class Cart {
         return totalPrice;
     }
 
-    // Getter for orderList if needed
+    // Getter mendapatkan daftar item dalam keranjang.
     public List<OrderItem> getOrderList() {
         return orderList;
     }

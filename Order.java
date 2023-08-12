@@ -14,28 +14,27 @@ public class Order {
         this.totalPrice = calculateTotalPrice();
         decreaseStockAllItem();
     }
-
+    /*menghitung harga akhir pesanan setelah diberlakukan diskon. */
     public double getFinalPrice() {
         return totalPrice * (1 - discountRate);
     }
-
+    /*menghitung tingkat diskon berdasarkan item dalam keranjang. */
     private double calculateDiscountRate() {
-        // You might use cart.getOrderList() to access the items in the cart
-        // You can return the discount rate as a percentage (e.g., 0.15 for 15% discount)
-        return 0.0; // Placeholder, replace with actual calculation
-    }
 
+        return 0.0; 
+    }
+    /*menghitung total harga dari seluruh item dalam keranjang. */
     private double calculateTotalPrice() {
         return cart.getTotalPrice();
     }
-
+    /*mengurangi stok semua item dalam keranjang setelah checkout. */
     private void decreaseStockAllItem() {
         List<OrderItem> orderItems = cart.getOrderList();
         for (OrderItem orderItem : orderItems) {
             orderItem.getProduct().decreaseStock(orderItem.getQuantity());
         }
     }
-    
+    /*menghasilkan representasi String dari pesanan. */
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();

@@ -11,7 +11,7 @@ public class Diary extends Product{
         super(name, price, stock);
         this.expiredDate = LocalDate.parse(date, formatter);
     }
-
+    /*menghitung diskon berdasarkan tanggal kadaluwarsa produk. */
     @Override
     public int checkDiscount(int quantity) {
         long differentDate = ChronoUnit.DAYS.between(LocalDate.now(),this.expiredDate);

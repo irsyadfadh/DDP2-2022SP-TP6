@@ -21,7 +21,7 @@ abstract class Product {
     public String getName(){
         return this.name;
     }
-    
+    /*mengurangi stock yang telah dibeli */
     public void decreaseStock(int quantity){
         this.stock -= quantity;
     }
@@ -30,7 +30,7 @@ abstract class Product {
         return String.format("Produk %s memiliki stok %s", this.name, this.stock);  
     }
 
-    
+    /*menghitung diskon berdasarkan kriteria tertentu. */
     public abstract int checkDiscount(int quantity);
 
 }
