@@ -29,4 +29,13 @@ public class Customer implements CanShop {
     public double getDiscountRate() {
         return 0.0; // Tidak ada diskon default
     }
+    public String getName() {
+        return name;
+    }
+    public List<OrderItem> getOrderItemsInCart() {
+        return cart.getOrderList();
+    }
+    public List<Order> getOrderHistory() {
+        return orderHistory;
+    }
 }
