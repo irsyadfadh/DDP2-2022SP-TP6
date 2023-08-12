@@ -26,4 +26,7 @@ public class Customer implements CanShop {
             System.out.println("Keranjang Anda kosong");
         }
     }
+    public double getDiscountRate() {
+        return 0.0; // Tidak ada diskon default
+    }
 }
